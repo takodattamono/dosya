@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+/* PC用のCSS */
+@media (min-width: 800px){/* PCのCSSここから */
+    /* 見出し */
+html {
+    height: 100%;
+    }
+body {
+    min-height: 100%;
+    }
+   
+.page-title{
+    font-size: 5rem;
+    }
+
+/* ホーム画像 */
+.resize-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    }
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* 必要に応じて調整 */
+}
+
+.overlay-text {
+  width: 100%;       /* 幅いっぱいに広げる */
+  max-width: none;   /* 幅制限を解除 */
+  position: absolute;
+  top: 50%;        /* 縦中央 */
+  left: 50%;       /* 横中央 */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 8rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* 背景になじまないように影をつける */
+  text-align: center;
+}
+
+/* body */
+.mannaka-okitai{
+    text-align: center;
+    margin: 20px;
+}
+
+.ue-text{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 25px;
+}
+
+
+
+.resize-images{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    }
+
+.syurui{
+  display: flex;
+  justify-content: center; /* 画像グループを中央に */
+  gap: 30px; /* 画像と画像の間隔 */
+  margin: 20px;
+}
+
+.syurui img{
+  width: 400px; /* お好みのサイズに調整 */
+  height: auto;
+}
+
+.title{
+  text-align: center; /* 画像とテキストを中央揃え */
+}
+
+/* hoba- */
+
+.resize-images {
+  position: relative;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.resize-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.resize-images img.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.resize-images:hover img.hover {
+  opacity: 1;
+}
+
+.resize-images:hover img.normal {
+  opacity: 0;
+}
+
+
+
+
+
+.image-item img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.caption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.urusai{
+    text-align: center;
+    margin: 20px;
+}
+
+.sizi-text{
+    text-align: center;
+    color: red;
+    margin: 10px;
+}
+
+.shape-container {
+  position: relative;
+  width: 200px;    /* 図形の幅 */
+  height: 200px;   /* 図形の高さ */
+}
+
+.shape-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.shape {
+  width: 100%;
+  height: 100%;
+  background-color: #DAC5A9;
+  border-radius: 8px;
+}
+
+.shape-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow-y: auto; /* 内容が多くなったらスクロール */
+  
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+.shape-text h4 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.shape-text p {
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+}
+
+/* 備えて */
+.sagase {
+  display: flex;
+  flex-direction: column;   /* ← 縦に並べる */
+  align-items: center;      /* ← 中央に寄せる！ */
+  gap: 20px;
+  margin: 20px;
+}
+
+.sagase-img img,
+.sagasumono-img img {
+  width: 900px;
+  height: auto;
+  max-width: 100%;
+}
+
+
+/* 全体をグリッドまたはフレックスで整列 */
+.shape-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* 各図形の枠 */
+.dai-matome {
+  position: relative;
+  width: 500px;
+  height: 100px;
+}
+
+/* 図形（背景） */
+.dai-title {
+  width: 100%;
+  height: 100%;
+  background-color: #dac5a9;
+  border-radius: 12px;
+}
+
+/* 重ねるテキスト */
+.title-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7); /* 背景が透ける */
+}
+
+.title-text h4 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.title-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+
+    }
